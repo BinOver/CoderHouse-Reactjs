@@ -1,0 +1,35 @@
+.header {
+  background-color: darkgoldenrod;
+
+  .header__containter {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 0;
+
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header__logo {
+    width:80px;
+    font-size: 40px;
+    font-weight: 700;
+    color:aliceblue;
+  }
+
+  .header__nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .header__link {
+    color: aliceblue;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+}
+
+

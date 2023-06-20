@@ -1,0 +1,50 @@
+[
+    {
+        "id":1,
+        "nombre":"Producto 1",
+        "descripcion":"Descripcion producto 1",
+        "precio":1500,
+        "img":"http://dummyimage.com/200x200/000/fff",
+        "categoria": "tecnologia"
+    },
+    {
+        "id":2,
+        "nombre":"Producto 2",
+        "descripcion":"Descripcion producto 2",
+        "precio":1500,
+        "img":"http://dummyimage.com/200x200/000/fff",
+        "categoria":"deporte"
+    },
+    {
+        "id":3,
+        "nombre":"Producto 3",
+        "descripcion":"Descripcion producto 3",
+        "precio":1500,
+        "img":"http://dummyimage.com/200x200/000/fff",
+        "categoria":"indumentaria"
+    },
+    {
+        "id":4,
+        "nombre":"Producto 4",
+        "descripcion":"Descripcion producto 4",
+        "precio":1500,
+        "img":"http://dummyimage.com/200x200/000/fff",
+        "categoria":"tecnologia"
+    },
+    {
+        "id":5,
+        "nombre":"Producto 5",
+        "descripcion":"Descripcion producto 5",
+        "precio":1500,
+        "img":"http://dummyimage.com/200x200/000/fff",
+        "categoria":"deporte"
+    },
+    {
+        "id":6,
+        "nombre":"Producto 6",
+        "descripcion":"Descripcion producto 6",
+        "precio":1500,
+        "img":"http://dummyimage.com/200x200/000/fff",
+        "categoria":"indumentaria"
+    }
+]

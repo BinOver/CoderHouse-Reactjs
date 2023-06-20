@@ -6,7 +6,7 @@ import { ItemDetail } from '../ItemDetail/ItemDetail'
 
 export const ItemDetailContainer = ( {mensaje} ) => {
 
-    const { id } = useParams()
+    const { itemId } = useParams()
     const [item , setItem] = useState(null)
     const [loading, setLoading] = useState(true)
 
@@ -15,14 +15,14 @@ export const ItemDetailContainer = ( {mensaje} ) => {
 
         pedirDatos()
             .then((res) => {
-                setItem(res.find((prod) => prod.id === Number(id)))
+                setItem(res.find((prod) => prod.id === Number(itemId)))
             })
             .catch((err) => {
                 console.log(err)
             })
             .finally(() => 
                 setLoading(false))
-    },[id])
+    },[itemId])
 
     return (
         <div className="container my-5">

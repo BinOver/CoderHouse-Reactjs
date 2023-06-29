@@ -5,19 +5,25 @@ import './styles/styles.scss'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { BrowserRouter, Routes, Route, Navigate} from 'react-router-dom'
+import { CartProvider } from './context/CartContext'
+import { Cart } from './components/Cart/Cart'
+
 
 function App() {
 
   return (
-    <BrowserRouter>
-      <NavBar />
-      <Routes>
-        <Route path="/" element={<ItemListContainer mensaje="Bienvenidos a nuestro e-Commerce" />} />
-        <Route path="/category/:categoryId" element={<ItemListContainer />} />
-        <Route path="/item/:itemId" element={<ItemDetailContainer />} />
-        <Route path="*" element={ <Navigate to={"/"} />} />
-      </Routes>
-    </BrowserRouter>
+      <CartProvider>
+        <BrowserRouter>
+          <NavBar />
+          <Routes>
+            <Route path="/" element={<ItemListContainer mensaje="Bienvenidos a nuestro e-Commerce" />} />
+            <Route path="/category/:categoryId" element={<ItemListContainer />} />
+            <Route path="/item/:itemId" element={<ItemDetailContainer />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="*" element={ <Navigate to={"/"} />} />
+          </Routes>
+        </BrowserRouter>
+      </CartProvider>
   )
 }
 

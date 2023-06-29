@@ -5,7 +5,8 @@
         "descripcion":"Mouse Gamer Inalambrico con 1ms de respuesta",
         "precio":48500,
         "img":"https://www.techlandbd.com/image/cache/catalog/Mouse/Logitech/G903/logitech-g903-wireless-gaming-mouse-1-200x200.jpg",
-        "categoria": "tecnologia"
+        "categoria": "tecnologia",
+        "stock": 10
     },
     {
         "id":2,
@@ -13,7 +14,8 @@
         "descripcion":"Juego de mancuernas roscadas + discos 20kg",
         "precio":22000,
         "img":"https://pngimg.com/uploads/dumbbell/small/dumbbell_PNG16423.png",
-        "categoria":"deporte"
+        "categoria":"deporte",
+        "stock": 10
     },
     {
         "id":3,
@@ -21,7 +23,8 @@
         "descripcion":"Campera Adidas Varilite Hombre",
         "precio":84700,
         "img":"https://f.fcdn.app/imgs/bcc6a9/demo.fenicio.com.uy/demo/08b4/original/catalogo/Pr01FenCamperaVerde1/200x200/adidas-campera-verde.jpg",
-        "categoria":"indumentaria"
+        "categoria":"indumentaria",
+        "stock": 10
     },
     {
         "id":4,
@@ -29,7 +32,8 @@
         "descripcion":"Teclado mecanico gamer con RGB",
         "precio":101995,
         "img":"https://www.coolmod.com/images/product/large/PROD-023423_1.jpg",
-        "categoria":"tecnologia"
+        "categoria":"tecnologia",
+        "stock": 10
     },
     {
         "id":5,
@@ -37,7 +41,8 @@
         "descripcion":"Banco para pesas reglinable",
         "precio":90500,
         "img":"https://images-na.ssl-images-amazon.com/images/I/71fgtkR2whL._AC_UL200_SR200,200_.jpg",
-        "categoria":"deporte"
+        "categoria":"deporte",
+        "stock": 10
     },
     {
         "id":6,
@@ -45,6 +50,7 @@
         "descripcion":"Jean Levis modelo 505 regular fit",
         "precio":26900,
         "img":"https://images-na.ssl-images-amazon.com/images/I/91RjWcZvdpL._AC_UL200_SR200,200_.jpg",
-        "categoria":"indumentaria"
+        "categoria":"indumentaria",
+        "stock": 10
     }
 ]

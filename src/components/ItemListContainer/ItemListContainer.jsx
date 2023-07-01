@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import { ItemList } from '../ItemList/ItemList'
 import { collection, getDocs, query, where } from "firebase/firestore"
 import { db } from '../../firebase/config'
+import { Loading} from '../../components/Loading/Loading'
 
 export const ItemListContainer = ( {mensaje} ) => {
 
@@ -35,8 +36,8 @@ export const ItemListContainer = ( {mensaje} ) => {
             <p>{mensaje}</p>
             {
                 loading
-                    ? <h2>Cargando informacion</h2>
-                    :<ItemList items={productos} />
+                    ? <Loading />
+                    : <ItemList items={productos} />
             } 
         </div>
     )

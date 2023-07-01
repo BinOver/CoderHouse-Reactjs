@@ -8,7 +8,7 @@ export const CartWidget = () =>{
 
   return(
     <Link to="/cart" className="cart fs-5">
-      <FaShoppingCart />
+      <FaShoppingCart className="cart__icon"/>
       <p className="cart__cant">{totalCantidad()}</p>
     </Link>
   )

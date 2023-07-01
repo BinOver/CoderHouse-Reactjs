@@ -1,13 +1,18 @@
 .cart {
     display: flex;
     justify-content: space-between;
+    text-decoration: none;
 }
 
 .cart__icon{
     width: 40px;
+    height: auto;
     padding-right: 3px;
+    color:black;
 }
 
 .cart__cant{
     padding-top: 5px;
+    color: black;
+
 }

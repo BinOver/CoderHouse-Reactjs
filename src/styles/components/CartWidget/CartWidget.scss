@@ -14,5 +14,13 @@
 .cart__cant{
     padding-top: 5px;
     color: black;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s ease-out
 
+}
+
+.cart__cant__active{
+    visibility: visible;
+    opacity: 1;
 }

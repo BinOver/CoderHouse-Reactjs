@@ -6,7 +6,7 @@ import CartList from "../CartList/CartList"
 
 
 export const Cart = () => {
-    const { cart, totalCompra, vaciarCarrito, eliminarDelCarrito } = useContext(CartContext)
+    const { cart } = useContext(CartContext)
 
     return (
         <div className="container my-5">

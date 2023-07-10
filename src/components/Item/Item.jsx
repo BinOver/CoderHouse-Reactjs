@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 
 
-export const Item =({id,nombre,precio,descripcion,img}) =>{
+export const Item =({id,nombre,precio,descripcion,img,stock}) =>{
 
     return (
             <div className='card col-3 m-2' style={{width: '18rem'}}>
@@ -10,6 +10,7 @@ export const Item =({id,nombre,precio,descripcion,img}) =>{
                     <h4 className='card-title text-center'>{nombre}</h4>
                     <hr />
                     <p className='card-text'>{descripcion}</p>
+                    {stock <= 5 && <p style={{color:'red'}}> Solo quedan {stock} unidades!</p>}
                     <p className='card-text'>Precio: ${precio}</p>
                 </div>
                 <Link className="btn btn-warning m-2" style={{width: '8rem'}} to={`/item/${id}`}>Detalle</Link>

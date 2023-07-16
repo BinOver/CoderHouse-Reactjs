@@ -3,37 +3,35 @@
   background-color: #f0bb1d;
 
   .navbar__containter {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 20px 0;
-
     display:flex;
     justify-content: space-between;
     align-items: center;
+    width: auto;
   }
 
   .navbar__logo {
     width:80px;
-    font-size: 40px;
+    font-size: 20px;
     font-weight: 700;
     color:aliceblue;
   }
 
   .navbar__title {
     font-family: 'Comfortaa', cursive;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 700;
+    margin-bottom: 0;
   }
 
   .navbar__nav {
     display: flex;
-    gap: 20px;
+    gap:10px;
     align-items: center;
   }
 
   .navbar__link {
-    color: rgb(0, 0, 0);
-    font-size: 18px;
+    color: rgb(71, 71, 71);
+    font-size: 15px;
     font-family: 'Cabin', sans-serif;
     text-transform: uppercase;
     text-decoration: none;
@@ -41,7 +39,7 @@
 
   .navbar__title-link{
     text-decoration: none;
-    color: black;
+    color: rgb(36, 36, 36);
   }
 }
 

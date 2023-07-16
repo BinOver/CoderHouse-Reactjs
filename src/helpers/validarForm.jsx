@@ -1,6 +1,6 @@
 
 
-export const validarForm = (nombre,direccion,email) => {
+export const validarForm = (nombre,direccion,email,email2) => {
 
     const validarNombre = /^[A-Za-z\s]+$/
     const validarDireccion = /^(?=.*[A-Za-z])(?=.*\d)(?=.*\s).+$/
@@ -20,6 +20,13 @@ export const validarForm = (nombre,direccion,email) => {
         alert('Para el campo "Email" por favor ingresar direcciones validas.')
         return false
     }
+
+    if (email != email2){
+        alert('El Email ingresado y su verificacion son distintas')
+        return false
+    }
+    
+    return true    
 }
 
 export default validarForm

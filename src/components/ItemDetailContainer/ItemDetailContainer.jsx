@@ -4,7 +4,6 @@ import { ItemDetail } from '../ItemDetail/ItemDetail'
 import { doc, getDoc } from "firebase/firestore"
 import { db } from "../../firebase/config"
 
-
 export const ItemDetailContainer = ( {mensaje} ) => {
 
     const { itemId } = useParams()
@@ -16,22 +15,27 @@ export const ItemDetailContainer = ( {mensaje} ) => {
         const itemRef = doc(db, "productos", itemId)
         getDoc(itemRef)
             .then((resp) => {
-                setItem({
-                    ...resp.data(),
-                    id: resp.id
-                })
+                if (resp.exists()) {
+                    setItem({
+                        ...resp.data(),
+                        id: resp.id
+                    })
+                }else {
+                    console.log("el documento no existe")
+                }
             })
             .catch(e => console.log(e))
             .finally(() => setLoading(false))
-
     },[itemId])
 
     return (
         <div className="container my-5">
             {
-                loading
-                    ? <h2>Cargando informacion</h2>
-                    :<ItemDetail {...item} />
+                loading 
+                    ? (<h2>Cargando informacion</h2>) 
+                    :(item 
+                        ? <ItemDetail {...item} />
+                        : <h2>No se encuentra el ID ingresado</h2>)
             }
             
         </div>

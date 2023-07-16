@@ -12,35 +12,17 @@ export const Checkout = () => {
     const [value,setValue] = useState({
         nombre: '',
         direccion: '',
-        email: ''
+        email: '',
+        email2: ''
     })
 
     const handleSubmit =(e) => {
         e.preventDefault()
         
-        // const validarNombre = /^[A-Za-z\s]+$/
-        // const validarDireccion = /^(?=.*[A-Za-z])(?=.*\d)(?=.*\s).+$/
-        // const validarEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+        if(!validarForm(value.nombre, value.direccion, value.email,value.email2)){
+            return
+        }
 
-        // if (!validarNombre.test(value.nombre)) {
-        //     alert('Para el campo "Nombre" solo se permiten letras y espacios.')
-        //     return
-        // }
-
-        // if (!validarDireccion.test(value.direccion)) {
-        //     alert('Para el campo "Direccion" solo se permiten letras, numeros y espacios.')
-        //     return
-        // }
-
-        // if (!validarEmail.test(value.email)) {
-        //     alert('Para el campo "Email" por favor ingresar direcciones validas.')
-        //     return
-        // }
-
-            if(validarForm(value.nombre, value.direccion, value.email)){
-                return
-            }
-        
         const orden = {
             cliente: value,
             items: cart,
@@ -63,9 +45,7 @@ export const Checkout = () => {
         setValue({
             ...value,
             [e.target.name]:e.target.value
-            })
-
-            console.log(e.target.name)
+        })
     }
 
     if(orderId){
@@ -84,10 +64,11 @@ export const Checkout = () => {
     }
     
     return (
-        <div>
-            <h2>Checkout</h2>
+        <div className="checkout">
+            <h2>Finalizando su compra</h2>
+            <h6>Complente el formulario para seguir</h6>
             <hr />
-            <form onSubmit={handleSubmit}>
+            <form className="checkout__form" onSubmit={handleSubmit}>
                 <input 
                     value={value.nombre}
                     type="text"
@@ -112,10 +93,17 @@ export const Checkout = () => {
                     onChange={handleInputChange}
                     name="email"
                 />
+                <input
+                    value={value.email2}
+                    type="email"
+                    placeholder="Confirmar E-mail:"
+                    className="form-control my-2"
+                    onChange={handleInputChange}
+                    name="email2"
+                />
                 <button className="btn btn-primary" type="submit">Enviar</button>
             </form>
         </div>
-
     )
 }
 

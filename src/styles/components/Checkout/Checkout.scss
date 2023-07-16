@@ -1,0 +1,17 @@
+.checkout{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 100vh;
+
+    h2{
+        margin-top: 20px;
+    }
+
+    .checkout__form {
+        margin-right:20px;
+        margin-left:20px;
+    }
+    
+}
+

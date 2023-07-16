@@ -30,7 +30,7 @@ export const ItemListContainer = ( {mensaje} ) => {
         },[categoryId])
 
     return (
-        <div className='list__container my-5 container'>
+        <div className='list__container container'>
             <h2>Lista de productos</h2>
             <hr />
             <p>{mensaje}</p>

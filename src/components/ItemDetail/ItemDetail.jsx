@@ -24,8 +24,8 @@ export const ItemDetail = ({id, nombre, precio, descripcion, img, categoria, sto
     }
     
     return(
-        <div className="container my-5 card" style={{width: '18rem'}}>
-            <img className='card-img-top p-2' src={img} alt={nombre} />
+        <div className="container my-5 card itemdetail shadow" >
+            <img className='card-img-top p-2 itemdetail__img' src={img} alt={nombre} />
             <div className='card-body'>
                 <h2 className='card-title text-center'>{nombre}</h2>
                 <hr />
@@ -38,7 +38,7 @@ export const ItemDetail = ({id, nombre, precio, descripcion, img, categoria, sto
 
             {
                 isInCart(id) 
-                ? <Link className ="btn btn-success pb-2" to="/cart">Terminar mi compra</Link>
+                ? <Link className ="btn btn-success mb-2" to="/cart">Terminar mi compra</Link>
                 : <div className="text-center"> 
                     <ItemCount className="text-center"
                         max={stock}
